@@ -34,13 +34,13 @@ private:
 	void copy_copy(const Queue&);
 	void copy_move(Queue&&);
 public:
-	Queue();//конструктор без параметров
-	Queue(const Queue&);//конструктор копирования
-	Queue(Queue&&);//конструктор перемещения
-	~Queue();//деструктор
-	Queue& operator=(const Queue&);//оператор присваивания для копирования
-	Queue& operator=(Queue&&);//оператор присваивания для перемещения 
-	bool is_empty() const;//проверка на пустоту
+	Queue();
+	Queue(const Queue&);
+	Queue(Queue&&);
+	~Queue();
+	Queue& operator=(const Queue&);
+	Queue& operator=(Queue&&);
+	bool is_empty() const;
 	int size() const;
 	int high_size() const;
 	int medium_size() const;
