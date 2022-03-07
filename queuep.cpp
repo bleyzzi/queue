@@ -79,13 +79,13 @@ void Queue::push(const int& _val, const Prt& p)
 
 Queue::Queue(const Queue& q)
 {
-    cout << "Копирование...." << "\n";
+    cout << "Copy...." << "\n";
     copy_copy(q);
 }
 
 Queue::Queue(Queue&& q)
 {
-    cout << "Перемещение...." << "\n";
+    cout << "Move...." << "\n";
     copy_move(move(q));
     q.cln();
 }
@@ -128,7 +128,7 @@ void Queue::copy_move(Queue&& q)
 
 Queue& Queue::operator=(const Queue& q)
 {
-    cout << "Копирование с помощью оператора присваивания...." << "\n";
+    cout << "Copying with the assignment operator...." << "\n";
     if (&q == this)
     {
         return *this;
@@ -140,7 +140,7 @@ Queue& Queue::operator=(const Queue& q)
 
 Queue& Queue::operator=(Queue&& q)
 {
-    cout << "Перемещение с помощью оператора присваивания...." << "\n";
+    cout << "Movying with the assignment operator...." << "\n";
     if (&q == this)
     {
         return *this;
@@ -164,7 +164,7 @@ void Queue::erase()
     {
         ptr2 = ptr;
         ptr = ptr2->next;
-        cout << ptr2->val << " Очищено" << "\n";
+        cout << ptr2->val << " Deleted" << "\n";
         delete ptr2;
     }
     cln();
@@ -217,7 +217,7 @@ bool Queue::pop()
         low_rear = nullptr;
         r_low_size--;
     }
-    cout << "Удаление...." << "\n";
+    cout << "Deleting...." << "\n";
     delete p;
     return 1;
 }
